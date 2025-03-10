@@ -23,6 +23,10 @@ then
 
 After both were installed, navigate to same level as this README is, run the following
 
+> npm install
+
+and then
+
 > npm run start
 
 You shall be greeted with the starting of the project.
@@ -49,7 +53,7 @@ This solution would allow user to input from a range of commands,
 
 This solution repo defaults the board dimension to 5 x 5, to easily manage the dimension, navigate to [model/robot-model.js](./model/board-model.js) and declare the desired dimension at line 6.
 
-This solution also assume each movement progression at 1 step per move, to make a difference, you may refer to [app.js](./app.js)
+This solution also assume each movement progression at 1 step per move, to make a difference, you may refer to [processor.js](./command-processor//processor.js)
 
 As the program takes the input and uppercase it, you may disregard capital cases when giving commands to the program.
 
@@ -88,3 +92,16 @@ From the attached screenshot, user can expect to see the flow of valid movements
 ### EXIT
 
 `EXIT` will allow user to exit the program. As this solution does not use any persistance memory, the progress will lost upon exit. To rerun the program, kindly follow the guide [above](#running-the-solution)
+
+## JESt Testing
+
+I included a JEST testing with some pre-defined scenarios where I would test for valid and invalid inputs.
+
+The tests could be found at [command-processor.test.js](./tests//command-processor.test.js)
+
+To run the test, at the same level as this README, run the following
+
+> npm test
+
+> [!WARNING]
+> If you haven't installed jest yet, please follow the guide [above](#nodejs) to get it readied, and do the above command again.

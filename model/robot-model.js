@@ -138,7 +138,7 @@ class Robot {
     }
   }
 
-  report() {
+  report(testMode = false) {
     if (this.robotPlacement.x !== null && this.robotPlacement.y !== null) {
       console.clear();
       let flow = "";
@@ -152,8 +152,11 @@ class Robot {
         this.robotPlacement.y,
         this.robotPlacement.facing
       );
+      console.log(this.robotPlacement);
+      return this.robotPlacement;
     } else {
       Errors.PLACE_ERROR("No coordinate. Make a valid robot placement first");
+      return undefined;
     }
   }
 }
